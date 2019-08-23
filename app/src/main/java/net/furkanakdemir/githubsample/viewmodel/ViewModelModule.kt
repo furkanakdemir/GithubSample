@@ -13,9 +13,9 @@ abstract class ViewModelModule {
     @Binds
     @IntoMap
     @ViewModelKey(RepoViewModel::class)
-    internal abstract fun bindRepoViewModel(repoViewModel: RepoViewModel): ViewModel
+    abstract fun bindRepoViewModel(repoViewModel: RepoViewModel): ViewModel
 
     @Binds
-    internal abstract fun bindViewModelFactory(factory: GithubViewModelFactory): ViewModelProvider.Factory
+    abstract fun bindViewModelFactory(factory: GithubViewModelFactory): ViewModelProvider.Factory
 
 }

@@ -2,13 +2,13 @@ package net.furkanakdemir.githubsample.network
 
 import net.furkanakdemir.githubsample.ui.data.RepoRaw
 import retrofit2.http.GET
-import retrofit2.http.Query
+import retrofit2.http.Path
 
 interface GithubService {
 
     @GET("/users/{username}/repos")
     suspend fun search(
-        @Query("username") username: String
+        @Path("username") username: String
     ): List<RepoRaw>
 
 

@@ -34,7 +34,7 @@ android {
 ext {
     dagger = "2.24"
     navigation = "2.1.0-rc01"
-    lifecycle = "2.0.0"
+    lifecycle = "2.1.0-rc01"
     timber = "4.7.1"
     paging = "2.1.0"
     glide = "4.9.0"
@@ -58,10 +58,19 @@ ext {
     ext_junit = "1.1.1"
     ext_truth = "1.2.0"
     truth = "1.0"
+
+    core_ktx = "1.0.2"
+    coroutine = "1.2.2"
 }
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
+
+    // Kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation "androidx.core:core-ktx:$core_ktx"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutine"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutine"
 
     // AndroidX
     implementation "androidx.constraintlayout:constraintlayout:$constraintlayout"
@@ -75,7 +84,7 @@ dependencies {
 
     // Lifecycle
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle"
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle"
     testImplementation "androidx.arch.core:core-testing:$lifecycle"
 
     // Navigation
