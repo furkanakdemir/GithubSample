@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="TextView"
+        tools:text="TextView"
         app:layout_constraintStart_toEndOf="@+id/userImageView"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="TextView"
+        android:text="@string/detail_stars_title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/userImageView" />
 
@@ -43,7 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:text="TextView"
+        tools:text="TextView"
         app:layout_constraintStart_toEndOf="@+id/starsTitleTextView"
         app:layout_constraintTop_toTopOf="@+id/starsTitleTextView" />
 
@@ -53,7 +53,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="TextView"
+        android:text="@string/detail_open_issues_title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/starsTitleTextView" />
 
@@ -62,7 +62,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:text="TextView"
+        tools:text="TextView"
         app:layout_constraintStart_toEndOf="@+id/issuesTitleTextView"
         app:layout_constraintTop_toTopOf="@+id/issuesTitleTextView" />
 

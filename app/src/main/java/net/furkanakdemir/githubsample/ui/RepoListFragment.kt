@@ -6,6 +6,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.lifecycle.get
+import androidx.navigation.fragment.NavHostFragment.findNavController
 import kotlinx.android.synthetic.main.fragment_repo_list.*
 import net.furkanakdemir.githubsample.R
 import net.furkanakdemir.githubsample.ui.base.BaseFragment
@@ -21,7 +22,7 @@ class RepoListFragment : BaseFragment(), RepoAdapter.OnRepoCallback {
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
 
-    lateinit var repoViewModel: RepoViewModel
+    private lateinit var repoViewModel: RepoViewModel
 
     override val layoutId: Int
         get() = R.layout.fragment_repo_list
@@ -48,5 +49,8 @@ class RepoListFragment : BaseFragment(), RepoAdapter.OnRepoCallback {
 
     override fun onRepoClicked(repo: Repo) {
         Timber.i("Repo ${repo.id} clicked")
+
+        val action = RepoListFragmentDirections.actionRepoListFragmentToRepoDetailFragment(repo)
+        findNavController(this).navigate(action)
     }
 }

@@ -20,5 +20,9 @@
         android:label="fragment_repo_detail"
         tools:layout="@layout/fragment_repo_detail">
 
+        <argument
+            android:name="repo"
+            app:argType="net.furkanakdemir.githubsample.ui.data.Repo" />
+
     </fragment>
 </navigation>
