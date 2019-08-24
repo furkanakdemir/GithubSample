@@ -4,7 +4,7 @@ package net.furkanakdemir.githubsample.ui.data
 import com.google.gson.annotations.SerializedName
 
 data class RepoRaw(
-    @SerializedName("id") val id: Int?,
+    @SerializedName("id") val id: Int = -1,
     @SerializedName("name") val name: String?,
     @SerializedName("full_name") val fullName: String?,
     @SerializedName("description") val description: String?,

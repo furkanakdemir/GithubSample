@@ -5,7 +5,7 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class Repo(
-    val id: Int?,
+    val id: Int = -1,
     val name: String?,
     val fullName: String?,
     val description: String?,

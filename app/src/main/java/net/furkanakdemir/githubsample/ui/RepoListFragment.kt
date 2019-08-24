@@ -31,10 +31,15 @@ class RepoListFragment : BaseFragment(), RepoAdapter.OnRepoCallback {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        repoViewModel = ViewModelProviders.of(this, viewModelFactory).get()
+        repoViewModel = ViewModelProviders.of(requireActivity(), viewModelFactory).get()
 
         repoViewModel.repoLiveData.observe(viewLifecycleOwner, Observer {
+
             repoAdapter.update(it)
+        })
+
+        repoViewModel.favRepoLiveData.observe(viewLifecycleOwner, Observer {
+            repoAdapter.notifyDataSetChanged()
         })
 
         button.setOnClickListener {
@@ -49,6 +54,7 @@ class RepoListFragment : BaseFragment(), RepoAdapter.OnRepoCallback {
 
     override fun onRepoClicked(repo: Repo) {
         Timber.i("Repo ${repo.id} clicked")
+        repoViewModel.selectRepo(repo)
 
         val action = RepoListFragmentDirections.actionRepoListFragmentToRepoDetailFragment(repo)
         findNavController(this).navigate(action)

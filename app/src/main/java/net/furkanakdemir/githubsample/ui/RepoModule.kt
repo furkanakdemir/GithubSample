@@ -1,13 +1,14 @@
 package net.furkanakdemir.githubsample.ui
 
+import android.content.Context
+import android.content.Context.MODE_PRIVATE
+import android.content.SharedPreferences
 import dagger.Module
 import dagger.Provides
 import net.furkanakdemir.githubsample.network.GithubService
 import net.furkanakdemir.githubsample.network.NetworkModule
-import net.furkanakdemir.githubsample.ui.data.GithubRepository
-import net.furkanakdemir.githubsample.ui.data.RepoDomainMapper
-import net.furkanakdemir.githubsample.ui.data.RepoViewMapper
-import net.furkanakdemir.githubsample.ui.data.Repository
+import net.furkanakdemir.githubsample.ui.data.*
+import javax.inject.Singleton
 
 @Module(includes = [NetworkModule::class])
 class RepoModule {
@@ -27,4 +28,19 @@ class RepoModule {
         githubService: GithubService,
         mapper: RepoDomainMapper
     ): Repository = GithubRepository(githubService, mapper)
+
+    @Provides
+    @Singleton
+    fun provideFavRepository(sharedPreferences: SharedPreferences): FavRepository =
+        GithubFavRepository(sharedPreferences)
+
+    @Provides
+    @Singleton
+    fun provideSharedPreferences(context: Context): SharedPreferences {
+        return context.getSharedPreferences(FILENAME_FAVORITES, MODE_PRIVATE)
+    }
+
+    companion object {
+        const val FILENAME_FAVORITES = "favorites"
+    }
 }
