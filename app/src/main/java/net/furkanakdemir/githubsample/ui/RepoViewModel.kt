@@ -54,11 +54,9 @@ class RepoViewModel @Inject constructor(
                 }
             }
         }
-
     }
 
     private fun mergeFavs(repos: List<Repo>, favs: List<Int>) {
-
         favs.forEach { favId ->
             val repo = repos.find { repo ->
                 favId == repo.id

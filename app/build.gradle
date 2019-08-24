@@ -37,6 +37,12 @@ android {
     androidExtensions {
         experimental = true
     }
+
+    lintOptions {
+        abortOnError true
+        absolutePaths false
+        lintConfig file('../qa/lint.xml')
+    }
 }
 
 ext {

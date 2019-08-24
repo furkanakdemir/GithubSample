@@ -1,14 +1,14 @@
 <resources>
     <string name="app_name">GithubSample</string>
-    <string name="title_activity_main">MainActivity</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="detail_stars_title">Stars</string>
-    <string name="detail_open_issues_title">Open Issues</string>
-    <string name="detail_favorite_repo">Favorite</string>
+    <!-- List -->
     <string name="list_username_hint">Username</string>
     <string name="list_submit_button">Submit</string>
     <string name="list_empty_initial">Search by Github Username</string>
     <string name="list_empty_not_found">Not found</string>
+
+    <!-- Detail -->
+    <string name="detail_stars_title">Stars</string>
+    <string name="detail_open_issues_title">Open Issues</string>
+    <string name="detail_favorite_repo">Favorite</string>
 </resources>
