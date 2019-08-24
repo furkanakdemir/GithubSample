@@ -4,6 +4,7 @@ import net.furkanakdemir.githubsample.network.GithubService
 import net.furkanakdemir.githubsample.ui.Result
 import javax.inject.Inject
 
+@Suppress("TooGenericExceptionCaught")
 class GithubRepository @Inject constructor(
     private val githubService: GithubService,
     private val mapper: RepoDomainMapper
