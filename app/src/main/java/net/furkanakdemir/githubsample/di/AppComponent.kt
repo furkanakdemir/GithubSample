@@ -1,6 +1,5 @@
 package net.furkanakdemir.githubsample.di
 
-
 import dagger.Component
 import dagger.android.AndroidInjectionModule
 import dagger.android.AndroidInjector

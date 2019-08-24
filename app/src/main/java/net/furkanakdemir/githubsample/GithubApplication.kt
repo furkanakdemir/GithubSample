@@ -16,7 +16,6 @@ class GithubApplication : DaggerApplication() {
         super.onCreate()
 
         setupTimber()
-
     }
 
     private fun setupTimber() {

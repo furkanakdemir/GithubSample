@@ -11,12 +11,10 @@ import retrofit2.converter.gson.GsonConverterFactory
 @Module
 class NetworkModule {
 
-
     @Provides
     fun provideGithubService(retrofit: Retrofit): GithubService {
         return retrofit.create(GithubService::class.java)
     }
-
 
     @Provides
     fun provideRetrofit(httpClient: OkHttpClient): Retrofit {
@@ -34,7 +32,6 @@ class NetworkModule {
             .addInterceptor(loggingInterceptor)
             .build()
     }
-
 
     @Provides
     fun provideHttpLoggingInterceptor(): HttpLoggingInterceptor {

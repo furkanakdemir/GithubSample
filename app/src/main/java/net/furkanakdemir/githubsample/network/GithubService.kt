@@ -7,9 +7,5 @@ import retrofit2.http.Path
 interface GithubService {
 
     @GET("/users/{username}/repos")
-    suspend fun search(
-        @Path("username") username: String
-    ): List<RepoRaw>
-
-
+    suspend fun search(@Path("username") username: String): List<RepoRaw>
 }

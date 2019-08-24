@@ -17,15 +17,13 @@ class RepoViewModel @Inject constructor(
     private val favRepository: FavRepository
 ) : ViewModel() {
 
-
     private val _repoLiveData = MutableLiveData<Result>()
     val repoLiveData: LiveData<Result>
         get() = _repoLiveData
 
     private val _repoDetailLiveData = MutableLiveData<Repo>()
-    val repoDetailLiveData: LiveData<Repo>
+    private val repoDetailLiveData: LiveData<Repo>
         get() = _repoDetailLiveData
-
 
     private val _favRepoLiveData = MutableLiveData<Boolean>()
     val favRepoLiveData: LiveData<Boolean>
@@ -94,9 +92,7 @@ class RepoViewModel @Inject constructor(
 
             it.isFavorite = !isFavorite
             _favRepoLiveData.value = !isFavorite
-
         }
-
     }
 
     fun setFavoriteStatus() {

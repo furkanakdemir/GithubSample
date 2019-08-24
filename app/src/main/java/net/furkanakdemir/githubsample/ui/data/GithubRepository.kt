@@ -19,10 +19,5 @@ class GithubRepository @Inject constructor(
         } catch (e: Exception) {
             Result.Failure(e)
         }
-
-    }
-
-    override suspend fun getRepo(repoId: Int): Repo {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 }

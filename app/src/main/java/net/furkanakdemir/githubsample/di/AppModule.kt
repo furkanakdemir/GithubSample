@@ -1,6 +1,5 @@
 package net.furkanakdemir.githubsample.di
 
-
 import android.content.Context
 import dagger.Module
 import dagger.Provides

@@ -1,6 +1,5 @@
 package net.furkanakdemir.githubsample.di
 
-
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 import net.furkanakdemir.githubsample.ui.RepoDetailFragment

@@ -10,10 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 import net.furkanakdemir.githubsample.R
 import net.furkanakdemir.githubsample.ui.data.Repo
 
-
 class RepoAdapter(private val onRepoCallback: OnRepoCallback) :
     RecyclerView.Adapter<RepoAdapter.RepoViewHolder>() {
-
 
     private val repos = mutableListOf<Repo>()
 
@@ -24,7 +22,6 @@ class RepoAdapter(private val onRepoCallback: OnRepoCallback) :
             .inflate(R.layout.list_item_repo, parent, false)
         return RepoViewHolder(view)
     }
-
 
     override fun onBindViewHolder(holder: RepoViewHolder, position: Int) {
 
@@ -67,7 +64,6 @@ class RepoAdapter(private val onRepoCallback: OnRepoCallback) :
         override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean =
             oldList[oldItemPosition] == newList[newItemPosition]
     }
-
 
     interface OnRepoCallback {
         fun onRepoClicked(repo: Repo)

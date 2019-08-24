@@ -17,5 +17,4 @@ abstract class ViewModelModule {
 
     @Binds
     abstract fun bindViewModelFactory(factory: GithubViewModelFactory): ViewModelProvider.Factory
-
 }

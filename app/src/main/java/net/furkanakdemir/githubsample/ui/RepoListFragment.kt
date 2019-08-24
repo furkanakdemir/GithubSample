@@ -20,7 +20,6 @@ import javax.inject.Inject
 
 class RepoListFragment : BaseFragment(), RepoAdapter.OnRepoCallback {
 
-
     private lateinit var repoAdapter: RepoAdapter
 
     @Inject
@@ -31,20 +30,16 @@ class RepoListFragment : BaseFragment(), RepoAdapter.OnRepoCallback {
     override val layoutId: Int
         get() = R.layout.fragment_repo_list
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
 
         showInitialEmptyText()
 
         textInputLayout.editText?.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(p0: Editable?) {
-
             }
 
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-
             }
 
             override fun onTextChanged(text: CharSequence?, p1: Int, p2: Int, p3: Int) {
@@ -66,7 +61,6 @@ class RepoListFragment : BaseFragment(), RepoAdapter.OnRepoCallback {
                 is Result.Loading -> showLoading()
                 is Result.Failure -> showNotFound()
             }
-
         })
 
         repoViewModel.favRepoLiveData.observe(viewLifecycleOwner, Observer {
@@ -82,7 +76,6 @@ class RepoListFragment : BaseFragment(), RepoAdapter.OnRepoCallback {
 
         repoAdapter = RepoAdapter(this)
         repoRecyclerView.adapter = repoAdapter
-
     }
 
     private fun showLoading() {

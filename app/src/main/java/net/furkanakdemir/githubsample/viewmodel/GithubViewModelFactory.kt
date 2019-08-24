@@ -1,6 +1,5 @@
 package net.furkanakdemir.githubsample.viewmodel
 
-
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 

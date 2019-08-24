@@ -49,7 +49,5 @@ class MainActivity : DaggerAppCompatActivity() {
     companion object {
         private const val TITLE_HOME = "Home"
         private const val KEY_DETAIL_ARGS = "repo"
-
     }
-
 }

@@ -1,6 +1,5 @@
 package net.furkanakdemir.githubsample.ui.data
 
-
 import com.google.gson.annotations.SerializedName
 
 data class RepoRaw(
