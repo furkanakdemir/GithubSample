@@ -1,4 +1,4 @@
-package net.furkanakdemir.githubsample.ui
+package net.furkanakdemir.githubsample.ui.detail
 
 import android.os.Bundle
 import android.view.Menu
@@ -14,6 +14,7 @@ import androidx.navigation.fragment.navArgs
 import kotlinx.android.synthetic.main.fragment_repo_detail.*
 import net.furkanakdemir.githubsample.R
 import net.furkanakdemir.githubsample.image.ImageLoader
+import net.furkanakdemir.githubsample.ui.RepoViewModel
 import net.furkanakdemir.githubsample.ui.base.BaseFragment
 import javax.inject.Inject
 

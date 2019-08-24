@@ -1,4 +1,4 @@
-package net.furkanakdemir.githubsample.ui.data
+package net.furkanakdemir.githubsample.ui.data.repository
 
 import android.content.SharedPreferences
 import androidx.core.content.edit

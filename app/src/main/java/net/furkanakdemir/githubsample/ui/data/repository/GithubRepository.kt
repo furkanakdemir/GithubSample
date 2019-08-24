@@ -1,7 +1,8 @@
-package net.furkanakdemir.githubsample.ui.data
+package net.furkanakdemir.githubsample.ui.data.repository
 
 import net.furkanakdemir.githubsample.network.GithubService
-import net.furkanakdemir.githubsample.ui.Result
+import net.furkanakdemir.githubsample.ui.data.RepoDomainMapper
+import net.furkanakdemir.githubsample.ui.data.Result
 import javax.inject.Inject
 
 @Suppress("TooGenericExceptionCaught")

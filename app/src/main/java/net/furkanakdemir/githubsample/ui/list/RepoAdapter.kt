@@ -1,4 +1,4 @@
-package net.furkanakdemir.githubsample.ui
+package net.furkanakdemir.githubsample.ui.list
 
 import android.view.LayoutInflater
 import android.view.View

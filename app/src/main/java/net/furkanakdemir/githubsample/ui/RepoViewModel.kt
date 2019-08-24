@@ -7,9 +7,10 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import net.furkanakdemir.githubsample.ui.data.FavRepository
 import net.furkanakdemir.githubsample.ui.data.Repo
-import net.furkanakdemir.githubsample.ui.data.Repository
+import net.furkanakdemir.githubsample.ui.data.Result
+import net.furkanakdemir.githubsample.ui.data.repository.FavRepository
+import net.furkanakdemir.githubsample.ui.data.repository.Repository
 import javax.inject.Inject
 
 class RepoViewModel @Inject constructor(

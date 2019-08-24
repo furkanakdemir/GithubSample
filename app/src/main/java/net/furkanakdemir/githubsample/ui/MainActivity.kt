@@ -1,9 +1,10 @@
-package net.furkanakdemir.githubsample
+package net.furkanakdemir.githubsample.ui
 
 import android.os.Bundle
 import androidx.navigation.findNavController
 import dagger.android.support.DaggerAppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import net.furkanakdemir.githubsample.R
 import net.furkanakdemir.githubsample.ui.data.Repo
 import timber.log.Timber
 

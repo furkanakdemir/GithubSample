@@ -1,4 +1,4 @@
-package net.furkanakdemir.githubsample.ui
+package net.furkanakdemir.githubsample.ui.list
 
 import android.os.Bundle
 import android.text.Editable
@@ -14,8 +14,10 @@ import net.furkanakdemir.githubsample.R
 import net.furkanakdemir.githubsample.ext.hide
 import net.furkanakdemir.githubsample.ext.hideKeyboard
 import net.furkanakdemir.githubsample.ext.show
+import net.furkanakdemir.githubsample.ui.RepoViewModel
 import net.furkanakdemir.githubsample.ui.base.BaseFragment
 import net.furkanakdemir.githubsample.ui.data.Repo
+import net.furkanakdemir.githubsample.ui.data.Result
 import javax.inject.Inject
 
 class RepoListFragment : BaseFragment(), RepoAdapter.OnRepoCallback {

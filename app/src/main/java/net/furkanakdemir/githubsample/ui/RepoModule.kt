@@ -7,11 +7,11 @@ import dagger.Module
 import dagger.Provides
 import net.furkanakdemir.githubsample.network.GithubService
 import net.furkanakdemir.githubsample.network.NetworkModule
-import net.furkanakdemir.githubsample.ui.data.FavRepository
-import net.furkanakdemir.githubsample.ui.data.GithubFavRepository
-import net.furkanakdemir.githubsample.ui.data.GithubRepository
 import net.furkanakdemir.githubsample.ui.data.RepoDomainMapper
-import net.furkanakdemir.githubsample.ui.data.Repository
+import net.furkanakdemir.githubsample.ui.data.repository.FavRepository
+import net.furkanakdemir.githubsample.ui.data.repository.GithubFavRepository
+import net.furkanakdemir.githubsample.ui.data.repository.GithubRepository
+import net.furkanakdemir.githubsample.ui.data.repository.Repository
 import javax.inject.Singleton
 
 @Module(includes = [NetworkModule::class])
@@ -24,7 +24,8 @@ class RepoModule {
     fun provideGithubRepository(
         githubService: GithubService,
         mapper: RepoDomainMapper
-    ): Repository = GithubRepository(githubService, mapper)
+    ): Repository =
+        GithubRepository(githubService, mapper)
 
     @Provides
     @Singleton

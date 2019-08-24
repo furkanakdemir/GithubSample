@@ -1,6 +1,4 @@
-package net.furkanakdemir.githubsample.ui
-
-import net.furkanakdemir.githubsample.ui.data.Repo
+package net.furkanakdemir.githubsample.ui.data
 
 sealed class Result {
     object Loading : Result()
