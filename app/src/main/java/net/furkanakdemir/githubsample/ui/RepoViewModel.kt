@@ -18,8 +18,8 @@ class RepoViewModel @Inject constructor(
 ) : ViewModel() {
 
 
-    private val _repoLiveData = MutableLiveData<List<Repo>>()
-    val repoLiveData: LiveData<List<Repo>>
+    private val _repoLiveData = MutableLiveData<Result>()
+    val repoLiveData: LiveData<Result>
         get() = _repoLiveData
 
     private val _repoDetailLiveData = MutableLiveData<Repo>()
@@ -33,13 +33,28 @@ class RepoViewModel @Inject constructor(
 
     fun search(username: String) {
 
-        viewModelScope.launch {
-            val repos = searchUsername(username)
-            val favs = getFavs()
+        if (username.isEmpty()) {
+            _repoLiveData.value = Result.Failure()
+        } else {
+            _repoLiveData.value = Result.Loading
 
-            mergeFavs(repos, favs)
-            _repoLiveData.value = repos
+            viewModelScope.launch {
+                val reposResult = searchUsername(username)
+                val favs = getFavs()
+
+                when (reposResult) {
+                    is Result.Success -> {
+                        mergeFavs(reposResult.repos, favs)
+                        _repoLiveData.value = Result.Success(reposResult.repos)
+                    }
+
+                    is Result.Failure -> {
+                        _repoLiveData.value = reposResult
+                    }
+                }
+            }
         }
+
     }
 
     private fun mergeFavs(repos: List<Repo>, favs: List<Int>) {

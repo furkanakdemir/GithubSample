@@ -1,4 +1,4 @@
-package net.furkanakdemir.githubsample
+package net.furkanakdemir.githubsample.ext
 
 import android.app.Activity
 import android.content.Context

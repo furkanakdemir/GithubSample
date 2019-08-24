@@ -9,4 +9,6 @@
     <string name="detail_favorite_repo">Favorite</string>
     <string name="list_username_hint">Username</string>
     <string name="list_submit_button">Submit</string>
+    <string name="list_empty_initial">Search by Github Username</string>
+    <string name="list_empty_not_found">Not found</string>
 </resources>
