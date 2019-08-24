@@ -1,8 +1,8 @@
 package net.furkanakdemir.githubsample.ui.data
 
-class RepoDomainMapper {
+open class RepoDomainMapper {
 
-    fun map(repoRaw: RepoRaw): Repo {
+    open fun map(repoRaw: RepoRaw): Repo {
         with(repoRaw) {
             return Repo(
                 id, name, fullName, description, hasIssues, language, openIssuesCount,
