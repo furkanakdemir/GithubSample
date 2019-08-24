@@ -9,6 +9,7 @@ import androidx.lifecycle.get
 import androidx.navigation.fragment.NavHostFragment.findNavController
 import kotlinx.android.synthetic.main.fragment_repo_list.*
 import net.furkanakdemir.githubsample.R
+import net.furkanakdemir.githubsample.hideKeyboard
 import net.furkanakdemir.githubsample.ui.base.BaseFragment
 import net.furkanakdemir.githubsample.ui.data.Repo
 import timber.log.Timber
@@ -42,9 +43,11 @@ class RepoListFragment : BaseFragment(), RepoAdapter.OnRepoCallback {
             repoAdapter.notifyDataSetChanged()
         })
 
-        button.setOnClickListener {
+        submitButton.setOnClickListener {
             val username = textInputLayout.editText?.text.toString()
             repoViewModel.search(username)
+
+            hideKeyboard()
         }
 
         repoAdapter = RepoAdapter(this)
