@@ -4,6 +4,7 @@ import com.nhaarman.mockitokotlin2.doReturn
 import com.nhaarman.mockitokotlin2.doThrow
 import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.verify
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runBlockingTest
 import net.furkanakdemir.githubsample.network.GithubService
 import net.furkanakdemir.githubsample.ui.data.Repo
@@ -21,6 +22,7 @@ import org.mockito.junit.MockitoJUnitRunner
 import org.hamcrest.CoreMatchers.`is` as Is
 import org.mockito.Mockito.`when` as whenever
 
+@ExperimentalCoroutinesApi
 @RunWith(MockitoJUnitRunner::class)
 class GithubRepositoryTest {
 

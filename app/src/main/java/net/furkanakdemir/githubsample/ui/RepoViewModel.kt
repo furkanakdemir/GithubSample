@@ -1,5 +1,6 @@
 package net.furkanakdemir.githubsample.ui
 
+import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -22,8 +23,9 @@ class RepoViewModel @Inject constructor(
     val repoLiveData: LiveData<Result>
         get() = _repoLiveData
 
+    @VisibleForTesting
     private val _repoDetailLiveData = MutableLiveData<Repo>()
-    private val repoDetailLiveData: LiveData<Repo>
+    val repoDetailLiveData: LiveData<Repo>
         get() = _repoDetailLiveData
 
     private val _favRepoLiveData = MutableLiveData<Boolean>()
