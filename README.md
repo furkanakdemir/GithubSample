@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/furkanakdemir/GithubSample/tree/master.svg?style=svg)](https://circleci.com/gh/furkanakdemir/GithubSample/tree/master)
+
 # GithubSample
 
 This is a sample showing a list of repositories on Github by searching username. 
