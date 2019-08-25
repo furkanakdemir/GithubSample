@@ -2,7 +2,6 @@ package net.furkanakdemir.githubsample
 
 import androidx.lifecycle.Observer
 
-
 class TestObserver<T> : Observer<T> {
 
     val observedValues = mutableListOf<T?>()

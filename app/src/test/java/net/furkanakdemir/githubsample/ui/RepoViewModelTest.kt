@@ -29,7 +29,6 @@ import org.junit.rules.TestRule
 import org.mockito.Mockito
 import org.hamcrest.CoreMatchers.`is` as Is
 
-
 @ExperimentalCoroutinesApi
 class RepoViewModelTest {
 
@@ -41,7 +40,6 @@ class RepoViewModelTest {
     var rule: TestRule = InstantTaskExecutorRule()
 
     private val mainThreadSurrogate = newSingleThreadContext("UI thread")
-
 
     @Before
     fun setup() {
@@ -118,7 +116,6 @@ class RepoViewModelTest {
         repoViewModel.selectRepo(unfavoritedRepo)
 
         repoViewModel.toggleFavorite()
-
 
         verify(favRepository).favorite(unfavoritedRepo.id)
         verify(favRepository, never()).unfavorite(unfavoritedRepo.id)

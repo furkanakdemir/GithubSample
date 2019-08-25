@@ -29,7 +29,6 @@ class GithubRepositoryTest {
     private lateinit var repository: Repository
     private lateinit var githubService: GithubService
 
-
     private val domainMapper: RepoDomainMapper = mock(RepoDomainMapper::class.java)
 
     @Before
@@ -41,7 +40,6 @@ class GithubRepositoryTest {
         }
         repository = GithubRepository(githubService, domainMapper)
     }
-
 
     @Test
     fun testValidRepos() = runBlockingTest {
@@ -116,6 +114,4 @@ class GithubRepositoryTest {
 
         private val TEST_LIST: List<RepoRaw> = mutableListOf(TEST_REPO_RAW)
     }
-
-
 }
