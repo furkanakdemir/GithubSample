@@ -3,13 +3,14 @@
 This is a sample showing a list of repositories on Github by searching username. 
 
 You can find a debug apk in `/apk` directory
+You can find unit tests in `/app/src/test` directory
 
 
 ### Android Development
 GithubSample attempts to use the latest libraries and tools:
 
   - Written in [Kotlin](https://kotlinlang.org/)
-  - Built with [MVVM Architectural style](https://developer.android.com/jetpack/docs/guide#recommended-app-arch) recommended by Google
+  - Developed with [MVVM Architectural style](https://developer.android.com/jetpack/docs/guide#recommended-app-arch) recommended by Google
   - Used [Coroutines](https://kotlinlang.org/docs/reference/coroutines-overview.html) for asynchronous works
   - Used [Architecture Components](https://developer.android.com/topic/libraries/architecture/): LiveData and Lifecycle-components, Navigation
   - Used [dagger-android](https://google.github.io/dagger/android.html) for Dependency Injection
@@ -18,7 +19,7 @@ GithubSample attempts to use the latest libraries and tools:
 
 ### Code Style
 
-This project uses the following tools to maintaing code quality. The configurations can be found in `/qa` directory
+This project uses the following tools to maintain code quality. The configurations can be found in `/qa` directory
 
 - [ktlint](https://ktlint.github.io/)
 - [detekt](https://arturbosch.github.io/detekt/)
